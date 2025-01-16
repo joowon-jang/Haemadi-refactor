@@ -31,6 +31,9 @@
   }
 
   .goHome {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
     display: inline-block;
     align-content: center;
     background-color: #4651b4;
@@ -41,7 +44,6 @@
     color: var(--white, #fff);
     font-size: var(--text-s);
     font-weight: 700;
-    z-index: 100;
   }
 }
 
