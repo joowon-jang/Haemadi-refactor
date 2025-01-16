@@ -1,10 +1,10 @@
 import { bool, func, oneOf, string } from 'prop-types';
 import { memo, useId, useMemo } from 'react';
 import styles from './BottleRadio.module.css';
-import glassBottle from '/glassBottle/glassBottle.webp';
-import glassBottleCenter from '/glassBottle/glassBottle_center.webp';
-import glassBottleEdge from '/glassBottle/glassBottle_edge.webp';
-import glassBottleSelected from '/glassBottle/glassBottle_selected.webp';
+import glassBottle from '@/assets/glassBottle/glassBottle.webp';
+import glassBottleCenter from '@/assets/glassBottle/glassBottle_center.webp';
+import glassBottleEdge from '@/assets/glassBottle/glassBottle_edge.webp';
+import glassBottleSelected from '@/assets/glassBottle/glassBottle_selected.webp';
 
 BottleRadio.propTypes = {
   index: oneOf([0, 1, 2, 3, 4]).isRequired,
