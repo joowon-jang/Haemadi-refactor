@@ -11,8 +11,6 @@ import BackButton from '@/components/BackButton/BackButton';
 import Button from '@/components/Button/Button';
 import Loading from '@/components/Loading/Loading';
 
-import glassBottle from '/glassBottle/glassBottle_selected.webp';
-import glassBottleMobile from '/glassBottle/glassBottle_center.webp';
 import { useToaster } from '@/stores/ToasterStore';
 
 function LetterBoxPage() {
@@ -101,7 +99,7 @@ function LetterBoxPage() {
         <main className={styles.main}>
           <h2>{`${replier === 'ai' ? 'Ai 마디' : '익명의 누군가'}에게 받은\n유리병 편지함이에요`}</h2>
           <img
-            src={desktop ? glassBottle : glassBottleMobile}
+            src={`/glassBottle/glassBottle_${desktop ? 'selected' : 'center'}.webp`}
             alt="유리병"
             className={styles.glassBottle}
             loading="lazy"

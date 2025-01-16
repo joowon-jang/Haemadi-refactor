@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { array } from 'prop-types';
 
 import styles from './MusicPlayer.module.css';
-import musicRecord from '/musicrecord.webp';
 import PlayTime from '../PlayTime/PlayTime';
 import RemoteButton from '../RemoteButton/RemoteButton';
 import MusicButton from '../MusicButton/MusicButton';
@@ -184,7 +183,7 @@ function MusicPlayer({ musicList = [] }) {
     <div className={styles.PlayerWrapper}>
       <div id="player"></div>
       <motion.img
-        src={musicRecord}
+        src="/musicrecord.webp"
         animate={controls} // controls를 animate에 연결
         style={{ rotate: 0 }} // 초기 회전 상태 설정
       />

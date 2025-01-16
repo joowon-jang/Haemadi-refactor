@@ -1,5 +1,4 @@
 import { getUserProfileImg, updateUserProfileImage } from '@/api/users';
-import defaultProfile from '/default_Profile.webp';
 import SVGIcon from '@/components/SVGIcon/SVGIcon';
 import icons from '@/icons';
 import { useAuthStore } from '@/stores/authStore';
@@ -14,7 +13,9 @@ function ProfileSettingInfo() {
   const userInfo = useAuthStore((store) => store.userInfo);
 
   const [image, setImage] = useState(
-    userInfo.profileImage ? getUserProfileImg(userInfo) : defaultProfile
+    userInfo.profileImage
+      ? getUserProfileImg(userInfo)
+      : '/default_Profile.webp'
   );
 
   const onChange = async (e) => {
@@ -38,7 +39,7 @@ function ProfileSettingInfo() {
       };
       reader.readAsDataURL(convertedImage);
     } else {
-      setImage(defaultProfile); // 업로드 취소 시 기본 이미지로 설정
+      setImage('/default_Profile.webp'); // 업로드 취소 시 기본 이미지로 설정
     }
   };
 

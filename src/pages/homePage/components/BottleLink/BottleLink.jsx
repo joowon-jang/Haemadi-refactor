@@ -1,8 +1,6 @@
 import { bool, oneOf, string } from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import styles from './BottleLink.module.css';
-import bottleLink_letterBox from '/homePage/bottleLink_letterBox.webp';
-import bottleLink_pickUp from '/homePage/bottleLink_pickUp.webp';
 import { memo } from 'react';
 
 BottleLink.propTypes = {
@@ -15,14 +13,14 @@ const typeConfigs = {
   pickUpBottle: {
     navigateTo: '/pick-up-bottle',
     linkLabel: '유리병 건지기 (답장할 일기 선택)',
-    bottleImg: bottleLink_pickUp,
+    bottleImg: '/homePage/bottleLink_pickUp.webp',
     cssText: { width: 'calc(115px + 3.5vw)' },
     notificationMessage: '누군가 당신의 답장을\n기다리고 있어요!',
   },
   letterBox: {
     navigateTo: '/letter-box',
     linkLabel: '유리병 편지함 (받은 답장 확인)',
-    bottleImg: bottleLink_letterBox,
+    bottleImg: '/homePage/bottleLink_letterBox.webp',
     cssText: { width: 'calc(150px + 6vw)' },
     notificationMessage: '바다 건너에서 떠내려온\n편지를 확인해 보세요!',
   },

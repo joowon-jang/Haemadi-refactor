@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 import styles from './NotFoundPage.module.css';
-import wave1 from '/logoItems/wave1.webp';
-import wave2 from '/logoItems/wave2.webp';
-import wave3 from '/logoItems/wave3.webp';
-import wave4 from '/logoItems/wave4.webp';
-import boat from '/logoItems/boat.webp';
 
 function NotFoundPage() {
   return (
@@ -33,16 +28,16 @@ function NotFoundPage() {
         <br />
         요청하신 페이지의 주소가 변경, 삭제되어 찾을 수 없습니다.
       </p>
-      <Link className={styles.goHome} to={'/'}>
+      <div aria-hidden="true">
+        <img className={styles.wave1} src="/logoItems/wave1.webp" alt="" />
+        <img className={styles.wave2} src="/logoItems/wave2.webp" alt="" />
+        <img className={styles.boat} src="/logoItems/boat.webp" alt="" />
+        <img className={styles.wave3} src="/logoItems/wave3.webp" alt="" />
+        <img className={styles.wave4} src="/logoItems/wave4.webp" alt="" />
+      </div>
+      <Link className={styles.goHome} to="/">
         홈으로
       </Link>
-      <div aria-hidden="true">
-        <img className={styles.wave1} src={wave1} alt="" />
-        <img className={styles.wave2} src={wave2} alt="" />
-        <img className={styles.boat} src={boat} alt="" />
-        <img className={styles.wave3} src={wave3} alt="" />
-        <img className={styles.wave4} src={wave4} alt="" />
-      </div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { memo } from 'react';
 
 import styles from './UserProfile.module.css';
-import defaultProfile from '/default_Profile.webp';
 import { getUserProfileImg } from '@/api/users';
 import { useAuthStore } from '@/stores/authStore';
 
@@ -18,7 +17,9 @@ function UserProfile() {
       <img
         className={styles.profileImg}
         src={
-          userInfo?.profileImage ? getUserProfileImg(userInfo) : defaultProfile
+          userInfo?.profileImage
+            ? getUserProfileImg(userInfo)
+            : '/default_Profile.webp'
         } // 프로필 이미지가 없을 경우 기본 이미지 표시
         alt="유저 프로필"
         loading="lazy"

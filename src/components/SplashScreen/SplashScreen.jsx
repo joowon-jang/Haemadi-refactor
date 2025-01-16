@@ -2,13 +2,6 @@ import { memo, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './SplashScreen.module.css';
 
-import wave1 from '/logoItems/wave1.webp';
-import wave2 from '/logoItems/wave2.webp';
-import wave3 from '/logoItems/wave3.webp';
-import wave4 from '/logoItems/wave4.webp';
-import boat from '/logoItems/boat.webp';
-import phoneMockUp from '/logoItems/phoneMockUp.webp';
-
 // 스플래시 스크린 엘리먼트
 // 컴포넌트 초기화 과정에서 1회만 필요하므로 컴포넌트 외부에서 참조
 const splashScreenElement = document.getElementById('splash-screen');
@@ -37,12 +30,16 @@ function SplashScreen({ fadeOutTime = 2000 }) {
         <h1>해마디</h1>
       </div>
       <div aria-hidden="true">
-        <img className={styles.wave1} src={wave1} alt="" />
-        <img className={styles.wave2} src={wave2} alt="" />
-        <img className={styles.boat} src={boat} alt="" />
-        <img className={styles.wave3} src={wave3} alt="" />
-        <img className={styles.wave4} src={wave4} alt="" />
-        <img className={styles.phoneMockUp} src={phoneMockUp} alt="" />
+        <img className={styles.wave1} src="/logoItems/wave1.webp" alt="" />
+        <img className={styles.wave2} src="/logoItems/wave2.webp" alt="" />
+        <img className={styles.boat} src="/logoItems/boat.webp" alt="" />
+        <img className={styles.wave3} src="/logoItems/wave3.webp" alt="" />
+        <img className={styles.wave4} src="/logoItems/wave4.webp" alt="" />
+        <img
+          className={styles.phoneMockUp}
+          src="/logoItems/phoneMockUp.webp"
+          alt=""
+        />
       </div>
     </div>,
     splashScreenElement

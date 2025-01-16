@@ -1,7 +1,6 @@
 import { func } from 'prop-types';
 import { useLayoutEffect } from 'react';
 import styles from './SendingScreen.module.css';
-import letterBottle from '/sendingScreen/letterBottle.webp';
 
 // 로딩 시작/끝 엘리먼트
 // 컴포넌트 초기화 과정에서 1회만 필요하므로 컴포넌트 외부에서 참조
@@ -60,7 +59,11 @@ function SendingScreen({ onComplete }) {
   return (
     <div className={styles.sendingScreen}>
       <p>편지를 유리병에 넣고 있어요</p>
-      <img src={letterBottle} alt="편지가 담긴 유리병" loading="lazy" />
+      <img
+        src="/sendingScreen/letterBottle.webp"
+        alt="편지가 담긴 유리병"
+        loading="lazy"
+      />
     </div>
   );
 }
