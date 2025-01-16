@@ -25,13 +25,11 @@ const resetLoadingStart = () => {
 const setLoadingEnd = () => {
   loadingEndElement.innerHTML =
     '<p class="sr-only">콘텐츠 로딩이 마무리되었습니다.</p>';
-  loadingEndElement.setAttribute('role', 'alert');
 };
 
 // 로딩 끝 초기화 함수
 const resetLoadingEnd = () => {
   loadingEndElement.innerHTML = '';
-  loadingEndElement.removeAttribute('role');
 };
 
 // 컴포넌트 속성 타입 검사
