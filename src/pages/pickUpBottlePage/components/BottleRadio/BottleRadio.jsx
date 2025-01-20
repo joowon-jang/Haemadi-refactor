@@ -23,7 +23,9 @@ function BottleRadio({
 
   const bottleImgSrc = useMemo(() => {
     if (desktop) {
-      return selected ? '/glassBottle/glassBottle_selected.webp' : '/glassBottle/glassBottle.webp';
+      return selected
+        ? '/glassBottle/glassBottle_selected.webp'
+        : '/glassBottle/glassBottle.webp';
     } else {
       switch (location) {
         default:
