@@ -4,7 +4,7 @@ import { useSunStore } from '@/stores/sunStore';
 import { getStorage } from '@/utils';
 import { memo, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import GlobalNav from '../GlobalNav/GlobalNav';
+import GlobalNav from '../../components/GlobalNav/GlobalNav';
 import style from './RootLayout.module.css';
 
 function RootLayout() {

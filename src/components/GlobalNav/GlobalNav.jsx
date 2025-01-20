@@ -3,7 +3,7 @@ import { useMediaStore } from '@/stores/mediaStore';
 import { bool } from 'prop-types';
 import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
-import SVGIcon from '../../components/SVGIcon/SVGIcon';
+import SVGIcon from '../SVGIcon/SVGIcon';
 import styles from './GlobalNav.module.css';
 
 GlobalNav.propTypes = {
