@@ -1,10 +1,6 @@
 import { bool, func, oneOf, string } from 'prop-types';
 import { memo, useId, useMemo } from 'react';
 import styles from './BottleRadio.module.css';
-import glassBottle from '@/assets/glassBottle/glassBottle.webp';
-import glassBottleCenter from '@/assets/glassBottle/glassBottle_center.webp';
-import glassBottleEdge from '@/assets/glassBottle/glassBottle_edge.webp';
-import glassBottleSelected from '@/assets/glassBottle/glassBottle_selected.webp';
 
 BottleRadio.propTypes = {
   index: oneOf([0, 1, 2, 3, 4]).isRequired,
@@ -27,16 +23,16 @@ function BottleRadio({
 
   const bottleImgSrc = useMemo(() => {
     if (desktop) {
-      return selected ? glassBottleSelected : glassBottle;
+      return selected ? '/glassBottle/glassBottle_selected.webp' : '/glassBottle/glassBottle.webp';
     } else {
       switch (location) {
         default:
         case 'center':
-          return glassBottleCenter;
+          return '/glassBottle/glassBottle_center.webp';
         case 'side':
-          return glassBottle;
+          return '/glassBottle/glassBottle.webp';
         case 'edge':
-          return glassBottleEdge;
+          return '/glassBottle/glassBottle_edge.webp';
       }
     }
   }, [desktop, location, selected]);
